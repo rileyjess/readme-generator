@@ -18,11 +18,23 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// A function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) { 
   if (license === 'MIT') {
-    return 
+    return `https://choosealicense.com/licenses/mit/`;
+  } 
+  if (license === 'Apache 2.0') {
+    return `https://choosealicense.com/licenses/apache-2.0/`;
+  }
+  if (license === 'GPL 3.0') {
+    return `https://choosealicense.com/licenses/gpl-3.0/`;
+  } 
+  if (license === 'BSD 3') {
+    return `https://opensource.org/license/bsd-3-clause`;
+  }
+  if (license === 'None') {
+    return ``;
   }
 }
 
