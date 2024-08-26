@@ -2,16 +2,16 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { 
   if (license === 'MIT') {
-    return `![License](https://img.shields.io/badge/License-MIT-lightblue)`;
+    return `[![License](https://img.shields.io/badge/License-MIT-lightblue)](${renderLicenseLink(license)})`;
   } 
   if (license === 'Apache 2.0') {
-    return `![License](https://img.shields.io/badge/License-Apache_2.0-green)`;
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-green)](${renderLicenseLink(license)})`;
   }
   if (license === 'GPL 3.0') {
-    return `![License](https://img.shields.io/badge/License-GPL_3.0-orange)`;
+    return `[![License](https://img.shields.io/badge/License-GPL_3.0-orange)](${renderLicenseLink(license)})`;
   } 
   if (license === 'BSD 3') {
-    return `![License](https://img.shields.io/badge/License-BSD_3-violet)`;
+    return `[![License](https://img.shields.io/badge/License-BSD_3-violet)](${renderLicenseLink(license)})`;
   }
   if (license === 'None') {
     return ``;
@@ -38,14 +38,23 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// A function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) { 
+  if (license === 'None') {
+    return ``
+  } else {
+    return `## License
+  This project is licensed under the ${license} license.`
+  }
+}
 
 // A function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
  
+  ${renderLicenseBadge(data.license)}
+
   ## Description
   ${data.description}
   
@@ -64,8 +73,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   
-  ## License
-  This project is licensed under the ${data.license} license.
+  ${renderLicenseSection(data.license)}
   
   ## Contributing
   ${data.contributing}
