@@ -26,7 +26,7 @@ const questions = [
         name: 'usage',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'What license should this project have?',
         choices: ["MIT", "Apache 2.0", "GPL 3.0", "BSD 3", "None"],
         name: 'license',
@@ -71,6 +71,7 @@ function init() {
 // Function call to initialize app
 init()
     .then((responses) => {
+        console.log(responses);
         return generateMarkdown(responses);
     })
     .then((data) => {
