@@ -71,7 +71,6 @@ function init() {
 // Function call to initialize app
 init()
     .then((responses) => {
-        console.log(responses);
         return generateMarkdown(responses);
     })
     .then((data) => {
