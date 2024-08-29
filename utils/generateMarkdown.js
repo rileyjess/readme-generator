@@ -88,8 +88,8 @@ function generateMarkdown(data) {
   
   ## Questions
   Questions about this project? Contact the creator:
-  GitHub: https://github.com/${data.github}
-  Email: ${data.email}
+  * GitHub: https://github.com/${data.github}
+  * Email: ${data.email}
 `;
 }
 
