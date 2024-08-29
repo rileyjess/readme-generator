@@ -68,7 +68,9 @@ function generateMarkdown(data) {
   
   ## Installation
   To install necessary dependencies, run the following command:
+  ~~~
   ${data.installation}
+  ~~~
   
   ## Usage
   ${data.usage}
@@ -80,7 +82,9 @@ function generateMarkdown(data) {
   
   ## Tests
   To run tests, run the following command:
+  ~~~
   ${data.tests}
+  ~~~
   
   ## Questions
   Questions about this project? Contact the creator:
