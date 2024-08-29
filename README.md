@@ -38,7 +38,7 @@ npm i inquirer
 ~~~
 
 ## Walkthrough Video 
-
+Watch [this walkthrough](https://youtu.be/ZCQ-wbE6wOs?feature=shared) to see how the README generator works. 
 
 ## License
 This project is licensed under the MIT license.
