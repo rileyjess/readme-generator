@@ -36,5 +36,5 @@
   
   ## Questions
   Questions about this project? Contact the creator:
-  GitHub: https://github.com/rileyjess
-  Email: example@gmail.com
+  * GitHub: https://github.com/rileyjess
+  * Email: example@gmail.com
